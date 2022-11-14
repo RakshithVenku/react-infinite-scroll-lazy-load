@@ -8,7 +8,8 @@ function App() {
   const [pages, setPages] = useState(0)
 
   useEffect(() => {
-    axios.get(`https://picsum.photos/v2/list?page=${pages}&limit=10`)
+    // https://picsum.photos/v2/list?page=${pages}&limit=10
+    axios.get(`https://jsonplaceholder.typicode.com/photos?_start=${pages}&_limit=10`)
          .then((res) => {
           console.log(res.data)
           setData([...data,...res.data])
