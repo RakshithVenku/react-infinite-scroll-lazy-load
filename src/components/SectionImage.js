@@ -6,7 +6,7 @@ const SectionImage = ({data}) => {
             {data?.map((ele) => {
               return (
                 <div className="card">
-                    <img className="card-img-top" src={ele?.url} alt={ele?.title} />
+                    <img className="imageClass" data-src={ele?.download_url} alt={ele?.author} src={'https://via.placeholder.com/600'} />
                 </div>
               )
             })}
